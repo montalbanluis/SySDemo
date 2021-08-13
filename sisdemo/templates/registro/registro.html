@@ -1,0 +1,72 @@
+{% extends 'layouts/layout.html' %}
+
+{% block title %} {{title}} {% endblock title %}
+
+   {% block static %}
+
+   {% load static %}
+
+ <img src="{% static 'img/grupo.png' %} " alt="" class="img-fluid mx-auto d-block my-5"/>
+           
+   {% endblock static %}
+
+
+{% block content %}
+
+
+   {% if messages %}
+            {% for message in messages %}
+                
+
+                <div class="alert alert-success" role="alert">
+            {{message}}
+</div>
+            
+            {% endfor %}
+
+        {% endif %}
+
+
+{% load crispy_forms_tags %}
+
+
+    <!--Login-->
+    <section id="login">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 mx-auto">
+                    <div class="card">
+                        <div class="card-header">
+                            <h4 class="text-center">Registro de Usuario</h4>
+                        </div>
+                        <div class="card-body">
+                            <form method="POST" action="">
+                              {% csrf_token %}
+                                <div class="form-group">
+                                    {{ form|crispy }}
+
+                                </div>
+                                
+                                <button type="submit" class="btn btn-primary w-100"><i class="fas fa-user"></i>Registrarme</button>
+
+                                
+                                
+                              
+                                
+        
+     
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+{% endblock content %}
+
+
+
+   

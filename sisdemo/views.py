@@ -46,7 +46,7 @@ def register(request):
                 register_form.save()
 
                 # CREAR MENSAJE FLASH
-                messages.success(request, 'Te haz registado bien ctm!')
+                messages.success(request, 'Te haz registado correctamente!')
 
 
                 return redirect('register')
@@ -77,7 +77,7 @@ def login_user(request):
                 return redirect('panel')
 
             else:
-                messages.warning(request, 'No te haz identificado correctamente :(')
+                messages.warning(request, 'Error ingresar correctamente tus credenciales!')
 
 
 

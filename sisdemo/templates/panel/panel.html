@@ -205,37 +205,32 @@
                <!--Últimos productos-->
                <div class="card mt-5">
                    <div class="card-header bg-dark text-white">
-                       <h4><i class="fas fa-table"></i>Últimos Productos</h4>
+                       <h4><i class="fas fa-table"></i>Ultimas Personas</h4>
                    </div>
                    <div class="card-body">
                        <table class="table table-striped">
                            <thead>
                                <tr>
                                    <th>#</th>
-                                   <th>Producto</th>
-                                   <th>Talla</th>
-                                   <th>Precio</th>
+                                   <th>Rut</th>
+                                   <th>Nombre</th>
+                                   <th>Apellido</th>
+                                   <th>Foto</th>
+                            
                                </tr>
                            </thead>
                            <tbody>
+                           {% for person in personas %}
                                <tr>
-                                   <td>1</td>
-                                   <td>Camisa 1</td>
-                                   <td>X</td>
-                                   <td>$ 40.000</td>
+                                   <td>{{person.id}}</td>
+                                   <td>{{person.rut}}</td>
+                                   <td>{{person.nombre}}</td>
+                                   <td>{{person.apellido}}</td>
+                                   
                                </tr>
-                               <tr>
-                                    <td>2</td>
-                                    <td>Camisa 2</td>
-                                    <td>L</td>
-                                    <td>$ 52.000</td>
-                                </tr>
-                                <tr>
-                                    <td>3</td>
-                                    <td>Camisa 3</td>
-                                    <td>M</td>
-                                    <td>$ 60.000</td>
-                                </tr>
+
+                            {% endfor %}
+                               
                            </tbody>
                        </table>
                    </div>
@@ -287,8 +282,8 @@
             <div class="row">
                 <div class="col">
                     <p class="lead text-center">
-                        2019 - Todos los derechos &copy;
-                        <span>App Commerce</span>
+                        2021 - Todos los derechos &copy;
+                        <span>L4mv</span>
                     </p>
                 </div>
             </div>

@@ -14,7 +14,7 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 
 #IMPORTAR APP CON MIS VISTA
 
@@ -27,4 +27,5 @@ urlpatterns = [
     path('home/', views.panel, name='panel'),
     path('registro/', views.register, name='register'),
     path('logout/', views.logout_user, name='logout'),
+    path('', include('appsis.urls')),
 ]

@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'sisdemo',
     'appsis',
     'crispy_forms',
+    'rest_framework',
 ]
 
 

@@ -9,10 +9,10 @@ https://docs.djangoproject.com/en/3.1/howto/deployment/wsgi/
 
 import os
 
+
 from django.core.wsgi import get_wsgi_application
 
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'ProjectD.settings')
 
 application = get_wsgi_application()
 
-gunicorn --bind=0.0.0.0 --timeout 600 <module>.wsgi

@@ -94,9 +94,9 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'sisdemo',
-        'USER': 'root',
-        'PASSWORD': '',
-        'HOST': 'localhost',
+        'USER': 'lamv',
+        'PASSWORD': 'L@mv1997',
+        'HOST': 'lamv-mysqldbserver.mysql.database.azure.com',
         'PORT': 3306
     }
 }
